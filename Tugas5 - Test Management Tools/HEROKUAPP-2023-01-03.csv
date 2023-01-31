@@ -1,0 +1,202 @@
+id,title,description,preconditions,postconditions,tags,priority,severity,type,behavior,automation,status,is_flaky,layer,steps_type,steps_actions,steps_result,steps_data,milestone_id,milestone,suite_id,suite_parent_id,suite,suite_without_cases,parameters
+,,,,,,,,,,,,,,,,,,,,1,,"Button Make Appointment",1
+,,,,,,,,,,,,,,,,,,,,2,,Login,1
+,,,,,,,,,,,,,,,,,,,,3,,"Book Appointment",1
+,,,,,,,,,,,,,,,,,,,,4,,Logout,1
+1,"Verifikasi button Make Appointment Sukses","test kegunaan button make appointmen, https://katalon-demo-cura.herokuapp.com/","Go To URL https://katalon-demo-cura.herokuapp.com/","user masuk ke halaman login",,high,normal,functional,positive,to-be-automated,actual,no,e2e,classic,"1. Buka bowser
+2. Go To URL
+3. Klik button Make Appoinment
+","1. User buka browser google chrome
+2. Buka link, dan klik make appointment
+3. Sukses, user masuk halaman login
+","1. Google chrome, Mozilla, dll
+2. https://katalon-demo-cura.herokuapp.com/
+3. 
+",,,1,,"Button Make Appointment",,
+2,"Verifikasi Sukses login",TC-01,"TC-01, Klik Button Make Appointment","User masuk halaman awal/utama Book Make Appointment",,high,normal,functional,positive,to-be-automated,actual,no,e2e,classic,"1. Masukan username
+2. Masukaan Password
+3. Klik Button Login
+","1. Username benar
+2. Password benar
+3. User bisa login
+User masuk halaman awal Book Make Appointment
+","1. username : John Doe
+2. password : ThisIsNotAPassword
+3. 
+",,,2,,Login,,
+3,"Verifikasi gagal login, username salah",TC-01,"TC-01, Klik Button Make Appointment","Gagal login, masih berada di halaman login",,high,normal,functional,negative,to-be-automated,actual,no,e2e,classic,"1. Masukan username salah
+2. Masukan password benar
+3. Klik button login
+","1. username salah
+2. password benar
+3. User tidak bisa login, dan mendapatkan pesan error
+User masih di halaman login
+","1. username : wildan
+2. password : ThisIsNotAPassword
+3. 
+",,,2,,Login,,
+4,"Verifikasi gagal login, password salah",TC-01,"TC-01, Klik Button Make Appointment","Gagal login, masih berada di halaman login",,high,normal,functional,negative,to-be-automated,actual,no,e2e,classic,"1. Masukan username benar
+2. Masukan password salah
+3. Kliik Button Login
+","1. Username benar
+2. Password salah
+3. User tidak bisa login, dan mendapatkan pesan error
+User masih di halaman login
+","1. username : John Doe
+2. password : wildan
+3. 
+",,,2,,Login,,
+5,"Verifikasi gagal login, password dan username salah",TC-01,"TC-01, Klik Button Make Appointment","Gagal login, masih berada di halaman login",,high,normal,functional,negative,to-be-automated,actual,no,e2e,classic,"1. Masukan username salah
+2. Masukan password salah
+3. Klik Button Login
+","1. Username salah
+2. password salah
+3. User tidak bisa login, dan mendapatkan pesan error
+User masih di halaman login
+","1. username : wildan
+2. password : wildan
+3. 
+",,,2,,Login,,
+6,"Verifikasi gagal login, password dan username kosong",TC-01,"TC-01, Klik Button Make Appointment","Gagal login, masih berada di halaman login",,high,normal,functional,negative,to-be-automated,actual,no,e2e,classic,"1. Tidak memasukan username
+2. Tidak memasukan password
+3. Klik Button Login
+","1. Username kosong
+2. Password kosong
+3. User tidak bisa login, dan mendapatkan pesan error
+User masih di halaman login
+","1. username :
+2. password :
+3. 
+",,,2,,Login,,
+7,"Verifikasi gagal login, password kosong",TC-01,"TC-01, Klik Button Make Appointment","Gagal login, masih berada di halaman login",,high,normal,functional,negative,to-be-automated,actual,no,e2e,classic,"1. Masukan username benar
+2. Tidak memasukan password
+3. Klik Button Login
+","1. Username benar
+2. Password salah/kosong
+3. User tidak bisa login, dan mendapatkan pesan error
+User masih di halaman login
+","1. username : John Doe
+2. password :
+3. 
+",,,2,,Login,,
+8,"Verifikasi gagal login, username kosong",TC-01,"TC-01, Klik Button Make Appointment","Gagal login, masih berada di halaman login",,high,normal,functional,negative,to-be-automated,actual,no,e2e,classic,"1. Tidak memasukan username
+2. Masukan password benar
+3. Klik Button Login
+","1. Username salah/kosong
+2. password benar
+3. User tidak bisa login, dan mendapatkan pesan error
+User masih di halaman login
+","1. username :
+2. password : ThisIsNotAPassword
+3. 
+",,,2,,Login,,
+9,"Buat Janji Temu dengan kolom terisi penuh dan benar","TC-01, dan TC-02","User login","Masuk halaman Appointment Confirmation",,high,normal,functional,positive,to-be-automated,actual,no,e2e,classic,"1. Klik Facility dan pilih Hongkog CURA Healthcare Center
+2. Klik Apply for hospital readmission
+3. Klik Healthcare Program dan pilih Medicare
+4. Klik Visit Date (Required) dan pilih tanggal 04/01/2023
+5. Klik Comment dan ketik ""Belajar QA di Sanbercode"".
+6. Klik Book Appointment
+","1. Sukses memilih
+2. Sukses memilih/yes
+3. Sukses memilih
+4. Sukses memilih
+5. Sukses comment
+6. Menambahkan janji temu sukses
+Menampilkan halaman Appointment Confirmation
+","1. Hongkog CURA Healthcare Center
+2. 
+3. Medicare
+4. tanggal 04/01/2023
+5. Belajar QA di Sanbercode
+6. 
+",,,3,,"Book Appointment",,
+10,"Buat Janji Temu dengan  TIDAK mengisi kolom Visit Date (Required)","TC-01 dan TC-02","User login","Masuk halaman Appointment Confirmation",,high,normal,functional,negative,to-be-automated,actual,no,e2e,classic,"1. 1. Klik Facility dan pilih Hongkog CURA Healthcare Center
+2. 2\. Klik Apply for hospital readmission
+3. 3\. Klik Healthcare Program dan pilih Medicare
+4. 4\. Klik Visit Date \(Required\) tetapi tidak memilih
+5. 5\. Klik Comment dan ketik ""Belajar QA di Sanbercode""\.
+6. 6\. Klik Book Appointment
+","1. Sukses memilih
+2. Sukses memilih/yes
+3. Sukses memilih
+4. Wajib mengisi tanggal janji temu
+5. Sukses comment
+6. Gagal menambahkan janji temu
+Wajib mengisi tanggal janji temu
+User masih di halaman Book Make Appointment
+","1. 1. Hongkog CURA Healthcare Center
+2. 
+3. Medicare
+4. 
+5. Belajar QA di Sanbercode
+6. 
+",,,3,,"Book Appointment",,
+11,"Buat Janji Temu dengan  TIDAK mengisi kolom Comment","TC-01, dan TC-02","User login","Masuk halaman Appointment Confirmation",,high,normal,functional,negative,to-be-automated,actual,no,e2e,classic,"1. 1. Klik Facility dan pilih Hongkog CURA Healthcare Center
+2. 2\. Klik Apply for hospital readmission
+3. 3\. Klik Healthcare Program dan pilih Medicare
+4. 4\. Klik Visit Date \(Required\) dan pilih tanggal 04/01/2023
+5. 5\. Tidak mengisi comment
+6. 6\. Klik Book Appointment
+","1. Sukses memilih
+2. Sukses memilih/yes
+3. Sukses memilih
+4. Sukses memilih
+5. Comment kosong
+6. Menambahkan janji temu sukses
+Menampilkan halaman Appointment Confirmation
+","1. Hongkog CURA Healthcare Center
+2. Apply for hospital readmission
+3. Medicare
+4. 04/01/2023
+5. 
+6. 
+",,,3,,"Book Appointment",,
+12,"Buat Janji Temu dengan  memilih tanggal yang sudah terlewat","TC-01 dan TC-02","User login","Masih di halaman Book Make Appointment",,high,normal,functional,negative,to-be-automated,actual,no,e2e,classic,"1. 1. Klik Facility dan pilih Hongkog CURA Healthcare Center
+2. 2\. Klik Apply for hospital readmission
+3. 3\. Klik Healthcare Program dan pilih Medicare
+4. 4\. Klik Visit Date \(Required\) dan pilih tanggal 01/01/2023
+5. 5\. Klik Comment dan ketik ""Belajar QA di Sanbercode""\.
+6. 6\. Klik Book Appointment
+","1. Sukses memilih
+2. Sukses memilih
+3. Sukses memilih
+4. Sukses memilih
+5. Sukses comment
+6. Gagal menambahkan janji temu
+Wajib mengisi tanggal janji temu di hari selanjutnya
+User masih di halaman Book Make Appointment
+","1. Hongkog CURA Healthcare Center
+2. 
+3. Medicare
+4. 01/01/2023
+5. Belajar QA di Sanbercode
+6. 
+",,,3,,"Book Appointment",,
+13,"Buat Janji Temu dengan  memilih tahun yang sudah terlewat","TC-01 dan TC-02","User login","Masih di halaman Book Make Appointment",,high,normal,functional,negative,to-be-automated,actual,no,e2e,classic,"1. 1. Klik Facility dan pilih Hongkog CURA Healthcare Center
+2. 2\. Klik Apply for hospital readmission
+3. 3\. Klik Healthcare Program dan pilih Medicare
+4. 4\. Klik Visit Date \(Required\) dan pilih tanggal 01/01/2022
+5. 5\. Klik Comment dan ketik ""Belajar QA di Sanbercode""\.
+6. 6\. Klik Book Appointment
+","1. Sukses memilih
+2. Sukses memilih
+3. Sukses memilih
+4. Sukses memilih
+5. Sukses comment
+6. Gagal menambahkan janji temu
+Wajib mengisi tanggal dan tahun janji temu di hari selanjutnya
+User masih di halaman Book Make Appointment
+","1. Hongkog CURA Healthcare Center
+2. 
+3. Medicare
+4. 01/01/2022
+5. Belajar QA di Sanbercode
+6. 
+",,,3,,"Book Appointment",,
+14,"Verifikasi Logout","TC-01 dan TC-02","User login","Menampilkan halaman awal Make Appointment",,high,normal,functional,positive,to-be-automated,actual,no,e2e,classic,"1. 1. Klik Menu di Halaman Kanan Atas
+2. 2\. Klik Logout
+","1. Sukses Klik Menu
+2. Sukses Logout
+","1. 
+2. 
+",,,4,,Logout,,

@@ -1,0 +1,4 @@
+Untuk menjalankan proses login menggunakan tab di keyboard jalankan perintah sebagai berikut :
+1. npm install -D cypress-plugin-tab
+2. Pada e2e.js tambahkan kode berikut di baris terakhir:
+require("cypress-plugin-tab");
